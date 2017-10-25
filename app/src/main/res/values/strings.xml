@@ -1,0 +1,4 @@
+<resources>
+  <string name="app_name">NotiMem</string>
+  <string name="service_name">NotiMem Service</string>
+</resources>
