@@ -31,7 +31,7 @@ public class NotificationListener extends NotificationListenerService {
       appName = sbn.getPackageName();
     }
     NotificationItem item =
-        new NotificationItem().setUid(sbn.getGroupKey().split("\\|")[4] + String.valueOf(moment))
+        new NotificationItem().setUid(sbn.getKey() + String.valueOf(moment))
             .setAppGroupKey(sbn.getPackageName())
             .setAppName(appName)
             .setIcon(sbn.getNotification().extras.getInt(Notification.EXTRA_SMALL_ICON))
