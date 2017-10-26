@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
   private ListView list;
   List<NotificationItem> modelList = new ArrayList<>();
-  private String serviceID;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -46,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private boolean hasServiceEnabled(String serviceList){
-    serviceID = getPackageName() + "/" + getPackageName() + "." + NotificationListener.class.getSimpleName();
-    return serviceList.contains(serviceID);
+    return serviceList!=null && serviceList.contains(getPackageName() + "/" + getPackageName() + "." + NotificationListener.class.getSimpleName());
   }
 }
